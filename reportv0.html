@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>CycurHSM Static Analysis Report</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; }
+    h1 { color: #1b3b5a; }
+    table { width:100%; border-collapse: collapse; }
+    th, td { border:1px solid #ddd; padding:4px 6px; font-size:13px; }
+    th { background:#eef; }
+    tr.ERROR { background:#ffecec; }
+    tr.WARN  { background:#fff6e5; }
+    tr.INFO  { background:#eef7ff; }
+  </style>
+</head>
+<body>
+<h1>CycurHSM Static Analysis Report</h1>
+<table>
+<thead>
+<tr><th>File</th><th>Line</th><th>Function</th><th>Level</th><th>Type</th><th>Message</th></tr>
+</thead>
+<tbody>
+<tr class="ERROR"><td>C:\Users\LAU1HYD\Desktop\crypto\sample\test_sample_limit_exceed.c</td><td>7</td><td>test_simple_ok</td><td>ERROR</td><td>SESSION_LIMIT_EXCEEDED_LOOP</td><td>For-loop may create up to 10 concurrent sessions (&gt; max_sessions=2) (per-iteration delta=1, iterations=10).</td></tr>
+<tr class="ERROR"><td>C:\Users\LAU1HYD\Desktop\crypto\sample\test_session_limit.c</td><td>9</td><td>test_limit_exceeded</td><td>ERROR</td><td>SESSION_LIMIT_EXCEEDED</td><td>Potentially 3 concurrent sessions (&gt; configured max_sessions=2).</td></tr>
+<tr class="ERROR"><td>C:\Users\LAU1HYD\Desktop\crypto\sample\test_session_overwrite.c</td><td>14</td><td>test_session_overwrite</td><td>ERROR</td><td>SESSION_HANDLE_OVERWRITE</td><td>Variable 's1' already holds an active session opened at line 10. Overwritten by new OpenSession() at line 14. Previous session is leaked.</td></tr>
+</tbody>
+</table>
+</body>
+</html>

@@ -1,0 +1,26 @@
+[
+  {
+    "level": "ERROR",
+    "type": "SESSION_LIMIT_EXCEEDED_LOOP",
+    "message": "For-loop may create up to 10 concurrent sessions (> max_sessions=2) (per-iteration delta=1, iterations=10).",
+    "file": "C:\\Users\\LAU1HYD\\Desktop\\crypto\\sample\\test_sample_limit_exceed.c",
+    "line": 7,
+    "function": "test_simple_ok"
+  },
+  {
+    "level": "ERROR",
+    "type": "SESSION_LIMIT_EXCEEDED",
+    "message": "Potentially 3 concurrent sessions (> configured max_sessions=2).",
+    "file": "C:\\Users\\LAU1HYD\\Desktop\\crypto\\sample\\test_session_limit.c",
+    "line": 9,
+    "function": "test_limit_exceeded"
+  },
+  {
+    "level": "ERROR",
+    "type": "SESSION_HANDLE_OVERWRITE",
+    "message": "Variable 's1' already holds an active session opened at line 10. Overwritten by new OpenSession() at line 14. Previous session is leaked.",
+    "file": "C:\\Users\\LAU1HYD\\Desktop\\crypto\\sample\\test_session_overwrite.c",
+    "line": 14,
+    "function": "test_session_overwrite"
+  }
+]
